@@ -3,8 +3,8 @@ package com.example.customizecalculator;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     // Creating a string to store buttons data -
     String data;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,187 +58,125 @@ public class MainActivity extends AppCompatActivity {
         button_bracket_start = findViewById(R.id.bracket_start);
 
         // assign rough button with image -
-        rough = (ImageView) findViewById(R.id.imageView3);
+        rough = findViewById(R.id.imageView3);
 
         // assign textview with find view by id -
         input_text = findViewById(R.id.input_text);
         results = findViewById(R.id.results);
 
         // set methods for buttons (0-9)
-        button_dot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                data = input_text.getText().toString();
-                input_text.setText(data + ".");
-            }
+        button_dot.setOnClickListener(view -> {
+            data = input_text.getText().toString();
+            input_text.setText(data + ".");
         });
 
-        button_0.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                data = input_text.getText().toString();
-                input_text.setText(data + "0");
-            }
+        button_0.setOnClickListener(view -> {
+            data = input_text.getText().toString();
+            input_text.setText(data + "0");
         });
 
-        button_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                data = input_text.getText().toString();
-                input_text.setText(data + "1");
-            }
+        button_1.setOnClickListener(view -> {
+            data = input_text.getText().toString();
+            input_text.setText(data + "1");
         });
 
-        button_2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                data = input_text.getText().toString();
-                input_text.setText(data + "2");
-            }
+        button_2.setOnClickListener(view -> {
+            data = input_text.getText().toString();
+            input_text.setText(data + "2");
         });
 
-        button_3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                data = input_text.getText().toString();
-                input_text.setText(data + "3");
-            }
+        button_3.setOnClickListener(view -> {
+            data = input_text.getText().toString();
+            input_text.setText(data + "3");
         });
 
-        button_4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                data = input_text.getText().toString();
-                input_text.setText(data + "4");
-            }
+        button_4.setOnClickListener(view -> {
+            data = input_text.getText().toString();
+            input_text.setText(data + "4");
         });
 
-        button_5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                data = input_text.getText().toString();
-                input_text.setText(data + "5");
-            }
+        button_5.setOnClickListener(view -> {
+            data = input_text.getText().toString();
+            input_text.setText(data + "5");
         });
 
-        button_6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                data = input_text.getText().toString();
-                input_text.setText(data + "6");
-            }
+        button_6.setOnClickListener(view -> {
+            data = input_text.getText().toString();
+            input_text.setText(data + "6");
         });
 
-        button_7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                data = input_text.getText().toString();
-                input_text.setText(data + "7");
-            }
+        button_7.setOnClickListener(view -> {
+            data = input_text.getText().toString();
+            input_text.setText(data + "7");
         });
 
-        button_8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                data = input_text.getText().toString();
-                input_text.setText(data + "8");
-            }
+        button_8.setOnClickListener(view -> {
+            data = input_text.getText().toString();
+            input_text.setText(data + "8");
         });
 
-        button_9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                data = input_text.getText().toString();
-                input_text.setText(data + "9");
-            }
+        button_9.setOnClickListener(view -> {
+            data = input_text.getText().toString();
+            input_text.setText(data + "9");
         });
 
-        button_c.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                data = input_text.getText().toString();
-                input_text.setText("");
-                results.setText("");
-            }
+        button_c.setOnClickListener(view -> {
+            data = input_text.getText().toString();
+            input_text.setText("");
+            results.setText("");
         });
 
-        rough.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                data = input_text.getText().toString();
-                input_text.setText(data.substring(0, data.length()-1));
-            }
+        rough.setOnClickListener(view -> {
+            data = input_text.getText().toString();
+            input_text.setText(data.substring(0, data.length()-1));
         });
 
         // for operators
-        button_divide.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                data = input_text.getText().toString();
-                input_text.setText(data + "÷");
-            }
+        button_divide.setOnClickListener(view -> {
+            data = input_text.getText().toString();
+            input_text.setText(data + "÷");
         });
-        button_multiply.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                data = input_text.getText().toString();
-                input_text.setText(data + "×");
-            }
+        button_multiply.setOnClickListener(view -> {
+            data = input_text.getText().toString();
+            input_text.setText(data + "×");
         });
-        button_minus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                data = input_text.getText().toString();
-                input_text.setText(data + "-");
-            }
+        button_minus.setOnClickListener(view -> {
+            data = input_text.getText().toString();
+            input_text.setText(data + "-");
         });
-        button_plus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                data = input_text.getText().toString();
-                input_text.setText(data + "+");
-            }
+        button_plus.setOnClickListener(view -> {
+            data = input_text.getText().toString();
+            input_text.setText(data + "+");
         });
-        button_bracket_start.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                data = input_text.getText().toString();
-                input_text.setText(data + "(");
-            }
+        button_bracket_start.setOnClickListener(view -> {
+            data = input_text.getText().toString();
+            input_text.setText(data + "(");
         });
-        button_bracket_end.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                data = input_text.getText().toString();
-                input_text.setText(data + ")");
-            }
+        button_bracket_end.setOnClickListener(view -> {
+            data = input_text.getText().toString();
+            input_text.setText(data + ")");
         });
-
         // Equal Button
-        button_equal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                data = input_text.getText().toString();
-                data = data.replaceAll("÷", "/");
-                data = data.replaceAll("×", "*");
+        button_equal.setOnClickListener(view -> {
+            data = input_text.getText().toString();
+            data = data.replaceAll("÷", "/");
+            data = data.replaceAll("×", "*");
 
-                // Using rhino to solve calculation
-                Context rhino = Context.enter();
-                rhino.setOptimizationLevel(-1);
+            // Using rhino to solve calculation
+            Context rhino = Context.enter();
+            rhino.setOptimizationLevel(-1);
 
-                String final_result = "";
+            String final_result;
 
-                Scriptable scriptable = rhino.initStandardObjects();
-                final_result = rhino.evaluateString(scriptable, data, "JavaScript", 1, null).toString();
+            Scriptable scriptable = rhino.initStandardObjects();
+            final_result = rhino.evaluateString(scriptable, data, "JavaScript", 1, null).toString();
 
-                if(final_result.substring(final_result.length()-2, final_result.length()-0).equals(".0")){
-                    final_result = final_result.substring(0, final_result.length()-2);
-                }else if(final_result.substring(final_result.length()-13, final_result.length()-0).equals("0999999999999")){
-                    final_result = final_result.substring(0, final_result.length()-13) + "1";
-                }
-
-                results.setText(final_result);
+            if(final_result.startsWith(".0", final_result.length()-2)){
+                final_result = final_result.substring(0, final_result.length()-2);
+            }else if(final_result.startsWith("0999999999999", final_result.length()-13)){
+                final_result = final_result.substring(0, final_result.length()-13) + "1";
             }
+            results.setText(final_result);
         });
     }
 }
