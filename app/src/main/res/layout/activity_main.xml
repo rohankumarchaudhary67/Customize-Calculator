@@ -18,7 +18,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="232dp"
+            android:layout_height="0dp"
             android:layout_weight="1">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -57,8 +57,8 @@
                             android:layout_marginTop="20dp"
                             android:layout_marginEnd="20dp"
                             android:layout_marginBottom="20dp"
-                            android:gravity="top|left"
-                            android:hint="0"
+                            android:gravity="top|start"
+                            android:hint="@string/_0"
                             android:padding="2dp"
                             android:textColor="#2B2B2B"
                             android:textSize="34sp"
@@ -78,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                android:gravity="right"
+                android:gravity="end"
                 android:padding="5dp"
                 android:textColor="#000000"
                 android:textSize="48sp"
@@ -90,7 +90,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:gravity="right"
+            android:gravity="end"
             android:orientation="horizontal">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -103,7 +103,7 @@
                     android:layout_height="30dp"
                     android:layout_marginStart="20dp"
                     android:background="@drawable/history_button_bg"
-                    android:text="History"
+                    android:text="@string/history"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="italic"
@@ -119,7 +119,8 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/delete" />
+                    app:srcCompat="@drawable/delete"
+                    android:contentDescription="@string/todo" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
 
@@ -127,7 +128,8 @@
             android:layout_width="match_parent"
             android:layout_height="85dp"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:baselineAligned="false">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -140,7 +142,7 @@
                     android:layout_height="75dp"
                     android:layout_marginStart="10dp"
                     android:background="@drawable/button_bg_cancel"
-                    android:text="C"
+                    android:text="@string/cancle"
                     android:textColor="#FFFFFF"
                     android:textSize="30sp"
                     android:textStyle="bold"
@@ -161,7 +163,7 @@
                     android:layout_height="75dp"
                     android:layout_marginStart="2dp"
                     android:background="@drawable/button_bg_1"
-                    android:text="("
+                    android:text="@string/bracket_start"
                     android:textColor="#FFE500"
                     android:textSize="34sp"
                     android:textStyle="bold"
@@ -183,7 +185,7 @@
                     android:layout_height="75dp"
                     android:layout_marginEnd="2dp"
                     android:background="@drawable/button_bg_1"
-                    android:text=")"
+                    android:text="@string/bracket_end"
                     android:textColor="#FFE500"
                     android:textSize="34sp"
                     android:textStyle="bold"
@@ -205,7 +207,7 @@
                     android:layout_height="75dp"
                     android:layout_marginEnd="10dp"
                     android:background="@drawable/button_bg_1"
-                    android:text="÷"
+                    android:text="@string/divide"
                     android:textColor="#FFE500"
                     android:textSize="48sp"
                     android:textStyle="bold"
@@ -221,7 +223,8 @@
             android:layout_width="match_parent"
             android:layout_height="85dp"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:baselineAligned="false">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -234,7 +237,7 @@
                     android:layout_height="75dp"
                     android:layout_marginStart="10dp"
                     android:background="@drawable/button_bg_1"
-                    android:text="7"
+                    android:text="@string/_7"
                     android:textColor="#FFFFFF"
                     android:textSize="30sp"
                     android:textStyle="bold"
@@ -255,7 +258,7 @@
                     android:layout_height="75dp"
                     android:layout_marginStart="2dp"
                     android:background="@drawable/button_bg_1"
-                    android:text="8"
+                    android:text="@string/_8"
                     android:textColor="#FFFFFF"
                     android:textSize="30sp"
                     android:textStyle="bold"
@@ -277,7 +280,7 @@
                     android:layout_height="75dp"
                     android:layout_marginEnd="2dp"
                     android:background="@drawable/button_bg_1"
-                    android:text="9"
+                    android:text="@string/_9"
                     android:textColor="#FFFFFF"
                     android:textSize="30sp"
                     android:textStyle="bold"
@@ -299,7 +302,7 @@
                     android:layout_height="75dp"
                     android:layout_marginEnd="10dp"
                     android:background="@drawable/button_bg_1"
-                    android:text="×"
+                    android:text="@string/multiply"
                     android:textColor="#FFE500"
                     android:textSize="48sp"
                     android:textStyle="bold"
@@ -315,7 +318,8 @@
             android:layout_width="match_parent"
             android:layout_height="85dp"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:baselineAligned="false">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -328,7 +332,7 @@
                     android:layout_height="75dp"
                     android:layout_marginStart="10dp"
                     android:background="@drawable/button_bg_1"
-                    android:text="4"
+                    android:text="@string/_4"
                     android:textColor="#FFFFFF"
                     android:textSize="30sp"
                     android:textStyle="bold"
@@ -349,7 +353,7 @@
                     android:layout_height="75dp"
                     android:layout_marginStart="2dp"
                     android:background="@drawable/button_bg_1"
-                    android:text="5"
+                    android:text="@string/_5"
                     android:textColor="#FFFFFF"
                     android:textSize="30sp"
                     android:textStyle="bold"
@@ -371,7 +375,7 @@
                     android:layout_height="75dp"
                     android:layout_marginEnd="2dp"
                     android:background="@drawable/button_bg_1"
-                    android:text="6"
+                    android:text="@string/_6"
                     android:textColor="#FFFFFF"
                     android:textSize="30sp"
                     android:textStyle="bold"
@@ -393,7 +397,7 @@
                     android:layout_height="75dp"
                     android:layout_marginEnd="10dp"
                     android:background="@drawable/button_bg_1"
-                    android:text="-"
+                    android:text="@string/minus"
                     android:textColor="#FFE500"
                     android:textSize="48sp"
                     android:textStyle="bold"
@@ -409,7 +413,8 @@
             android:layout_width="match_parent"
             android:layout_height="85dp"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:baselineAligned="false">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -422,7 +427,7 @@
                     android:layout_height="75dp"
                     android:layout_marginStart="10dp"
                     android:background="@drawable/button_bg_1"
-                    android:text="1"
+                    android:text="@string/_1"
                     android:textColor="#FFFFFF"
                     android:textSize="30sp"
                     android:textStyle="bold"
@@ -444,7 +449,7 @@
                     android:layout_height="75dp"
                     android:layout_marginStart="2dp"
                     android:background="@drawable/button_bg_1"
-                    android:text="2"
+                    android:text="@string/_2"
                     android:textColor="#FFFFFF"
                     android:textSize="30sp"
                     android:textStyle="bold"
@@ -466,7 +471,7 @@
                     android:layout_height="75dp"
                     android:layout_marginEnd="2dp"
                     android:background="@drawable/button_bg_1"
-                    android:text="3"
+                    android:text="@string/_3"
                     android:textColor="#FFFFFF"
                     android:textSize="30sp"
                     android:textStyle="bold"
@@ -489,7 +494,7 @@
                     android:layout_height="75dp"
                     android:layout_marginEnd="10dp"
                     android:background="@drawable/button_bg_1"
-                    android:text="+"
+                    android:text="@string/plus"
                     android:textColor="#FFE500"
                     android:textSize="48sp"
                     android:textStyle="bold"
@@ -505,7 +510,8 @@
             android:layout_width="match_parent"
             android:layout_height="90dp"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:baselineAligned="false">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
