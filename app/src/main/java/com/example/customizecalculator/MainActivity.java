@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Scriptable;
@@ -128,7 +129,12 @@ public class MainActivity extends AppCompatActivity {
 
         rough.setOnClickListener(view -> {
             data = input_text.getText().toString();
-            input_text.setText(data.substring(0, data.length()-1));
+            if(data.equals("")){
+                Toast toast = Toast.makeText(this, "Already 0", Toast.LENGTH_SHORT);
+                toast.show();
+            }else{
+                input_text.setText(data.substring(0, data.length()-1));
+            }
         });
 
         // for operators
