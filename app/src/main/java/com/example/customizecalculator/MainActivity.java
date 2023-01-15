@@ -129,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
 
         rough.setOnClickListener(view -> {
             data = input_text.getText().toString();
+            // Prevent from crash the application
             if(data.equals("")){
                 Toast toast = Toast.makeText(this, "Already 0", Toast.LENGTH_SHORT);
                 toast.show();
@@ -136,6 +137,7 @@ public class MainActivity extends AppCompatActivity {
                 input_text.setText(data.substring(0, data.length()-1));
             }
         });
+
 
         // for operators
         button_divide.setOnClickListener(view -> {
@@ -177,6 +179,7 @@ public class MainActivity extends AppCompatActivity {
             Scriptable scriptable = rhino.initStandardObjects();
             final_result = rhino.evaluateString(scriptable, data, "JavaScript", 1, null).toString();
 
+            // Solve some error and bugs during the calculation
             if(final_result.startsWith(".0", final_result.length()-2)){
                 final_result = final_result.substring(0, final_result.length()-2);
             }else if(final_result.startsWith("0999999999999", final_result.length()-13)){
